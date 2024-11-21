@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: Fahasa
+      POSTGRES_USER: fahasa
+      POSTGRES_PASSWORD: fahấ
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+
+#Lệnh run: docker-compose up build

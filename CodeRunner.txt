@@ -1,0 +1,9 @@
+Deploy MongoDB in Docker Desktop
+    docker login
+    docker network create fahasanetwork
+    docker run -d -p 27017:27017 --network pibooknetwork --name FahasaMongoDB mongo
+    docker build -t fahasafull .
+    docker container run -e Mongo_HOST=FahasaMongoDB --network fahasanetwork --name pibook fahasafull
+
+Deploy PostgreSQL by Docker Compose
+    docker-compose up build
